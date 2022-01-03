@@ -1,0 +1,213 @@
+/*****************************************************
+                         VARS                           
+*****************************************************/
+/*****************************************************
+                         DEFAULT STYLES                           
+*****************************************************/
+html, body {
+  min-height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 20px;
+}
+
+/*****************************************************
+                         MAIN CONTAINER                           
+*****************************************************/
+main {
+  display: flex;
+  max-width: 1080px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/*****************************************************
+                         LOGO                          
+*****************************************************/
+#logo {
+  margin-top: 4rem;
+  max-width: 70px;
+  height: auto;
+}
+
+/*****************************************************
+                         header                           
+*****************************************************/
+h1 {
+  margin-bottom: 15px;
+  font-size: 3rem;
+}
+
+.header-style {
+  color: #969696;
+  font-weight: 300;
+}
+
+.subscribe-header {
+  color: #151f29;
+  font-weight: 300;
+  font-size: 1.05rem;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+/*****************************************************
+                         FORM                            
+*****************************************************/
+.form {
+  display: flex;
+  margin-bottom: 35px;
+}
+
+.form > * {
+  margin-right: 15px;
+}
+
+.form .input-group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.form .input-group span {
+  display: none;
+  position: absolute;
+  font-size: 0.65rem;
+  margin-left: 15px;
+  bottom: -18px;
+  color: red;
+}
+
+.form .input-group span.error {
+  display: block;
+}
+
+.form input {
+  position: relative;
+  font-size: 1.023rem;
+  border-radius: 2rem;
+  border-color: #d1d7e6;
+  padding: 1rem 12rem  1rem 1.5rem;
+  display: flex;
+  border-width: 1.5px;
+  align-items: center;
+  border-style: solid;
+  color: #d1d7e6;
+  max-width: 100%;
+}
+
+.form input.error {
+  border-color: #ff5263;
+  color: #ff5263;
+}
+
+.form input.error:focus {
+  border-color: #ff5263;
+  color: #ff5263;
+}
+
+.form input:focus {
+  border-color: #d1d7e6;
+  outline: none;
+}
+
+.form ::placeholder {
+  opacity: 1;
+  color: #d1d7e6;
+}
+
+.form button {
+  background: #4f7df3;
+  border-radius: 2rem;
+  border: 0;
+  padding: 1rem 3.5rem;
+  font-weight: 600;
+  box-shadow: 0 3px 3px #c2d3ff;
+  color: white;
+}
+
+.form button:hover {
+  background: rgba(79, 125, 243, 0.9);
+  cursor: pointer;
+}
+
+.dashboard {
+  margin-bottom: 35px;
+}
+
+.dashboard img {
+  width: 550px;
+  max-width: 100%;
+  display: block;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  min-width: 100%;
+  gap: 25px;
+}
+
+.social a {
+  border: 2px solid #f2f3f7;
+  padding: 5px;
+  border-radius: 50%;
+  display: flex;
+}
+
+.social a:hover {
+  background: #4f7df3;
+}
+
+.social a:hover svg {
+  fill: white;
+}
+
+.social a svg {
+  width: 15px;
+  height: 15px;
+  fill: #4f7df3;
+}
+
+small {
+  color: #969696;
+  font-size: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+/*****************************************************
+                         MEDIA                            
+*****************************************************/
+@media screen and (max-width: 528px) {
+  main {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .form {
+    width: 80%;
+    gap: 5px;
+    flex-direction: column;
+  }
+  .form .input-group span {
+    position: static;
+    text-align: center;
+    margin: 8px 0px 28px;
+  }
+  h1 {
+    text-align: center;
+  }
+}
